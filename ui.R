@@ -19,10 +19,11 @@ shinyUI(fluidPage(
         start = as.character(Sys.Date()-365), 
         end = as.character(Sys.Date())),
       br(),
-      
+      helpText("Tick this box to see the y-axis plotted on a log scale:"),
       checkboxInput("log", "Plot y axis on log scale", 
         value = FALSE),
-      
+      br(),
+      helpText("Tick this box to see prices adjusted for inflation:"),
       checkboxInput("adjust", 
         "Adjust prices for inflation", value = FALSE)
     ),
